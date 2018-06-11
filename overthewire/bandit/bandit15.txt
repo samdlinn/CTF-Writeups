@@ -1,0 +1,9 @@
+bandit15@bandit:~$ echo BfMYroe26WYalil77FoDi9qh59eK5xNr | openssl s_client -quiet -connect localhost:30001
+depth=0 CN = bandit
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = bandit
+verify return:1
+Correct!
+cluFn7wTiGryunymYOu4RcffSxQluehd
+

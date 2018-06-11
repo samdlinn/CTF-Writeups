@@ -1,0 +1,9 @@
+Copy the ssh key and save it to a file localy.
+
+chmod 600 bandit13sshkey.txt 
+
+ssh -i bandit13sshkey.txt bandit14@bandit.labs.overthewire.org
+
+cat /etc/bandit_pass/bandit14
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+

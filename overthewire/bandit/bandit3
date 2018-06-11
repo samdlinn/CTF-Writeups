@@ -1,0 +1,7 @@
+cat inhere/.hidden
+or
+cd inhere
+ls -al
+cat .hidden
+
+password: pIwrPrtPN36QITSp3EQaw936yaFoFgAB

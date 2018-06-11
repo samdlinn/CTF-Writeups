@@ -1,0 +1,5 @@
+find . -size 33c -group bandit6 -user bandit7
+The only file that does not have permission denied is ./var/lib/dpkg/info/bandit7.password
+
+cat ./var/lib/dpkg/info/bandit7.password
+password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
