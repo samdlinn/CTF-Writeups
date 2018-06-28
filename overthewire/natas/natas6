@@ -1,0 +1,7 @@
+:http://natas6.natas.labs.overthewire.org/includes/secret.inc
+Gives a secret 
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+
+7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
